@@ -1,0 +1,53 @@
+/* Large Screen Layout */
+@media screen and (min-width: 1024px) {
+  /* Background image for large screens */
+  .container {
+      background-image: url('../images/hero-large.webp'); /* Large background */
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      min-height: 100vh; /* Ensure background covers full height */
+  }
+
+  /* Hide hero-small.webp for large screens */
+  .article-img {
+      display: none; /* Hide the small hero image */
+  }
+
+  /* Apply opacity and set fixed width for cards */
+  .data, .weather {
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 25%; /* Adjust card width */
+      padding: 20px; /* More padding for better separation */
+  }
+
+  .data {
+      margin-right: auto; /* Increase space between data and weather cards */
+  }
+
+  /* Layout for large screens */
+  .row {
+      display: flex;
+      justify-content: space-around; /* Spread out the data and weather cards */
+      align-items: flex-start;
+      flex-direction: row; /* Horizontal layout */
+  }
+
+  /* Show emoticon on large screens */
+  .weather-icon {
+      display: none;
+  }
+
+  .weather-icon2 {
+      display: inline; /* Show emoticon on large screens */
+  }
+}
+
+/* Adding ::after pseudo-element */
+.header::after {
+  content: '';
+  display: block;
+  height: 5px; /* Line below header */
+  background-color: white; /* Color of the line */
+  margin-top: 10px;
+}
