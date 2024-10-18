@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --primary-color: #155624;
+    --secondary-color: #e5fee9;
+    --accent1-color: #fce6c0;
+    --accent2-color: #155624;
+    --heading-font: Merriweather, serif;
+    --paragraph-font: Quicksand, sans-serif;
+    --nav-background-color: #155624;
+    --nav-link-color: #eeeeee;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #155624;
+    --subliner-color: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--paragraph-font);
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    padding: 1rem;
+    text-align: center;
+}
+
+#menu {
+    background-color: var(--nav-background-color);
+    display: inline-block;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+nav {
+    display: none;
+    background-color: var(--nav-background-color);
+    justify-content: space-around;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a, #menu {
+    display: block;
+    padding: 0.5rem;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav a:hover, #menu:hover {
+    background-color: transparent; /* Keeps background transparent on hover */
+    color: var(--nav-hover-link-color); /* Changes text color on hover */
+    transform: scale(1.1); /* Slightly increases the size of the text */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+}
+
+figure {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 1rem;
+}
+
+/* Media query for larger screens (desktops and tablets) */
+@media (min-width: 768px) {
+    #menu {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
+    nav {
+        display: flex; /* Show the nav menu as a flexbox on larger screens */
+        justify-content: space-around;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 1rem;
+    }
+}

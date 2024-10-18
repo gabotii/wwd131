@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    body {
+        background-color: #e8f5e9;
+    }
+
+    header {
+        padding: 20px 40px;
+    }
+
+    .nav-item {
+        margin-left: 30px;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    footer {
+        padding: 3rem;
+        font-size: 1.1rem;
+    }
+}

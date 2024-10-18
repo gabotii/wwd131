@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chopper Album</title>
+    <link rel="stylesheet" href="styles/sample.css">
+    <script defer src="scripts/sample.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chopper Album</h1>
+        <a href="#" id="menu"></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#old">Old</a>
+            <a href="#new">New</a>
+            <a href="#large">Large</a>
+            <a href="#small">Small</a>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h2>Home</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 1">
+                <figcaption>sample 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 2">
+                <figcaption>sample 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 3">
+                <figcaption>sample 3</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 4">
+                <figcaption>sample 4</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 5">
+                <figcaption>sample 5</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 6">
+                <figcaption>sample 6</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 7">
+                <figcaption>sample 7</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 8">
+                <figcaption>sample 8</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 9">
+                <figcaption>sample 9</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 10">
+                <figcaption>sample 10</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 11">
+                <figcaption>sample 11</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sample1.jpg" alt="sample 12">
+                <figcaption>sample 12</figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> Gabriel Torrejon</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+        (function () {
+            function refreshCSS() {
+                var sheets = [].slice.call(document.getElementsByTagName("link"));
+                var head = document.getElementsByTagName("head")[0];
+                for (var i = 0; i < sheets.length; ++i) {
+                    var elem = sheets[i];
+                    var parent = elem.parentElement || head;
+                    parent.removeChild(elem);
+                    var rel = elem.rel;
+                    if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                        elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                    }
+                    parent.appendChild(elem);
+                }
+            }
+            var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+            var address = protocol + window.location.host + window.location.pathname + '/ws';
+            var socket = new WebSocket(address);
+            socket.onmessage = function (msg) {
+                if (msg.data == 'reload') window.location.reload();
+                else if (msg.data == 'refreshcss') refreshCSS();
+            };
+            if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                console.log('Live reload enabled.');
+                sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+            }
+        })();
+    }
+    else {
+        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+</script>
+</body>
+</html>
