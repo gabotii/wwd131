@@ -1,0 +1,253 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #21384F;
+    padding: 10px 20px;
+    color: white;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+}
+
+.article-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+
+.burger-menu {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 10px 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0c000;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 8px 18px;
+}
+
+.nav-links .active {
+    color: #f0c000;
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+    box-shadow: 0px 4px 8px #0000001a;
+    border-radius: 8px;
+}
+
+/* Certificate Container */
+.certificate-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    background-color: #2f4f6f;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: white;
+    color: black;
+}
+
+/* Course Cards */
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.course-cards .card {
+    background-color: #8b4513;
+    color: white;
+    width: 45%;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.course-cards .card:hover {
+    transform: translateY(-5px);
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #21384F;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1em;
+}
+
+.footer-content .flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+.last-update {
+    color: #f0c000;
+    margin-left: 10px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        display: inline; /* Show on mobile */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid #333;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .course-cards .card {
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100%; /* Make the image container full width */
+        overflow: hidden; /* Hide overflow for any image scaling */
+    }
+    
+    .card-image img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove bottom space under the image */
+    }
+}
