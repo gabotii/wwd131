@@ -1,0 +1,149 @@
+:root {
+  --blue: rgb(29, 77, 114);
+  --blue-1: rgba(29, 77, 114, 0.1);
+  --blue-7: rgba(29, 77, 114, 0.7);
+  --brown: rgba(100, 50, 25, 1);
+  --yellow: rgba(255, 255, 0, 1);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box; /* Added for better sizing */
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  font-family: 'Gabriel Torrejon', sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  background-color: var(--blue);
+  color: #fff;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+}
+
+nav a,
+nav a:visited {
+  flex: 1;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--brown);
+  font-weight: 600;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 0.5rem;
+  padding: 1rem;
+}
+
+.card {
+  border-radius: .5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem; /* Add space between cards */
+}
+
+.card p {
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: .5rem 0; /* Top and bottom margins */
+}
+
+.profile {
+  width: 120px;
+  margin: 0 auto 1rem; /* Center image */
+}
+
+.me {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.country {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content */
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.highlight {
+  color: yellow;
+  font-size: smaller;
+}
+
+figure {
+  margin: .5rem;
+}
+
+figcaption {
+  font-size: smaller;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  main {
+      grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+
+  .country {
+      align-items: center; /* Center content */
+  }
+
+  .me {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text */
+  }
+
+  h2, h3 {
+      font-size: 1.5rem; /* Increase heading sizes */
+  }
+
+  p {
+      padding: 0.5rem; /* Adjust paragraph padding */
+  }
+}
